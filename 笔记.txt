@@ -1,0 +1,17 @@
+一：头部发开
+1.使用字体图标的时候要安装styled-components@3.3.2版本插件，否则就是小方框，然后把createGlobalStyle换回injectGlobal
+2.利用immutable库，让header里的数据变成immutable对象，用get方法调用数据，用set方法让state里的数据进行变更
+//immutable对象的set方法,会结合之前immutable对象的值
+//和设置的值,返回一个全新的对象
+3.聚焦热门搜索框const一个方法，把搜索框剪切到show的下面，效果就是聚焦显示搜索框，失焦返回空
+4.进行异步操作的时候，在public下建立api文件夹自己写假数据(联调的时候删掉，换成真实数据)
+5.传递action之前把action里面的data转换为immutable类型
+6.merge同时改变多个数据内容，相当于多次调用set
+7.换一换的iconfont在类里添加zoom
+
+二：首页开发
+A:topic页面：
+1.列表内容存在redux的store里面(数据由reducer决定的)
+2.reducer拆分成很多部分,home页面下的组件,数据存在home组件对应的reducer之中(所以在home下建立store文件->index.js)
+3.使用redux里的connect方法让组件和store做连接，就可以取数据
+B：List页面:
